@@ -1,0 +1,31 @@
+for i in range(3):
+  nome= input('\n Qual o seu nome? ')
+  dia= float (input('Em qual dia você nasceu? '))
+ 
+  mes=float (input('Em qual mês?  '))
+  ano=float (input('E o ano? (dois últimos dígitos)' )) 
+  
+  if mes == 10:
+    mes = 1
+  elif mes == 11:
+    mes = 2
+  elif mes == 12:
+    mes = 3
+  else:
+    mes = mes
+
+  if ano >= 50 and ano <= 99:
+    idade = ano -22
+  if ano >= 00 and ano <= 22:
+      idade = 22-ano
+      
+  if idade > 18:
+    ano=ano/100
+    dia=50-dia
+    safadeza =round ((mes + (ano *dia)))
+    anjo =100-safadeza 
+
+    print(nome, 'você é', anjo,'% anjo, mas aquele', safadeza, '% é safadeza\n')
+
+  else:
+    print('Não é possivel calcular, você é menor de 18 anos')
